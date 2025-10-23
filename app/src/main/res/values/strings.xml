@@ -3,5 +3,5 @@
     <string name="welcome_message">Selamat Datang</string>
     <string name="email">Masukkan Email</string>
     <string name="password">Masukkan Password</string>
-    <string name="login">LOGIN</string>
+    <string name="daftar">DAFTAR</string>
 </resources>

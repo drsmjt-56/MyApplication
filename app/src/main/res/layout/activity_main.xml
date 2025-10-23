@@ -38,11 +38,11 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_daftar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:backgroundTint="@color/purple_amikom"/>
+        android:backgroundTint="@color/purple_amikom"
+        android:text="@string/daftar" />
 
     <TextView
         android:id="@+id/textView"
@@ -50,12 +50,6 @@
         android:layout_height="wrap_content"
         android:text="Belum punya akun?" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Daftar Disini"
-        android:backgroundTint="@color/purple_amikom"/>
 
 
 

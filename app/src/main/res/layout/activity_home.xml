@@ -7,12 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-
     <TextView
         android:id="@+id/tv_welcome_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Selamat Datang, Pengguna!"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="233dp" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_buka_situs"
+        android:layout_marginTop="200dp" />
+
+    <Button
+        android:id="@+id/btn_buka_situs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buka Situs Web"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

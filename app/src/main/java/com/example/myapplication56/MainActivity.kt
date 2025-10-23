@@ -23,12 +23,10 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        Log.d("mainActivity", "Aplikasi Berhasil dijalankan")
-
         val etUsername: EditText = findViewById(R.id.et_username)
-        val btnLogin: Button = findViewById(R.id.btn_login)
+        val btnDaftar: Button = findViewById(R.id.btn_daftar)
 
-        btnLogin.setOnClickListener {
+        btnDaftar.setOnClickListener {
             val username = etUsername.text.toString()
             val intent = Intent(this, HomeActivity::class.java)
 
@@ -36,5 +34,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnDaftar.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
