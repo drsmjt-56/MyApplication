@@ -1,36 +1,18 @@
 package com.example.myapplication56
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_home)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
-        val tvWelcomeMessage: TextView = findViewById(R.id.tv_welcome_message)
-        val username = intent.getStringExtra("EXTRA_USERNAME")
-
-        tvWelcomeMessage.text = "Selamat Datang, $username!"
-
-        val btnBukaSitus: Button = findViewById(R.id.btn_buka_situs)
-
-        btnBukaSitus.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://amikom.ac.id"))
-            startActivity(intent)
+        // Tambahkan fragment hanya jika belum ada (hindari dobel saat rotasi layar)
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, DashboardFragment())
+                .commit()
         }
     }
 }

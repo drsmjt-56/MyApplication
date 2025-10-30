@@ -1,10 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFF8FB"
     tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/textWelcomeRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Halaman Register"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#3E3E3E"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp" />
+
+    <TextView
+        android:id="@+id/textWelcomeJenisKelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        android:textSize="16sp"
+        android:textColor="#3E3E3E"
+        app:layout_constraintTop_toBottomOf="@id/textWelcomeRegister"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <RadioGroup
+        android:id="@+id/buttonJenisKelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textWelcomeJenisKelamin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <RadioButton
+            android:id="@+id/buttonJenisKelaminPria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pria" />
+
+        <RadioButton
+            android:id="@+id/buttonJenisKelaminWanita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wanita"
+            android:layout_marginStart="16dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textDomisili"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Domisili"
+        android:textSize="16sp"
+        android:textColor="#3E3E3E"
+        app:layout_constraintTop_toBottomOf="@id/buttonJenisKelamin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+
+    <Spinner
+        android:id="@+id/spinnerDomisili"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/array_kota"
+        app:layout_constraintTop_toBottomOf="@id/textDomisili"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saya setuju dengan Syarat dan Ketentuan"
+        android:textColor="#3E3E3E"
+        app:layout_constraintTop_toBottomOf="@id/spinnerDomisili"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btn_submit_register"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Daftar"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#7B2CBF"
+        app:layout_constraintTop_toBottomOf="@id/checkBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

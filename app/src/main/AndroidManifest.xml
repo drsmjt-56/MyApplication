@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication56">
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,12 +16,12 @@
         <!-- Halaman pendaftaran -->
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" />
+            android:exported="false" />
 
         <!-- Halaman setelah login -->
         <activity
             android:name=".HomeActivity"
-            android:exported="true" />
+            android:exported="false" />
 
         <!-- Halaman utama (yang pertama kali muncul) -->
         <activity

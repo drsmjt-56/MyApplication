@@ -1,7 +1,16 @@
 <resources>
-    <string name="app_name">My Application56</string>
-    <string name="welcome_message">Selamat Datang</string>
-    <string name="email">Masukkan Email</string>
+    <string name="app_name">My Application17</string>
+    <string name="welcome_message">Selamat Datang!</string>
+    <string name="email">Masukkan email</string>
     <string name="password">Masukkan Password</string>
-    <string name="daftar">DAFTAR</string>
+    <string name="login">LOGIN</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="array_kota">
+        <item>Yogyakarta</item>
+        <item>Jakarta</item>
+        <item>Surabaya</item>
+        <item>Bandung</item>
+    </string-array>
+
 </resources>
