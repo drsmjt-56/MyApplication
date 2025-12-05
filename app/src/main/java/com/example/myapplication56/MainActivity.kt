@@ -1,6 +1,5 @@
 package com.example.myapplication56
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -10,10 +9,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import java.util.logging.Logger
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,20 +21,24 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val etUsername: EditText = findViewById(R.id.et_username)
-        val btnDaftar: Button = findViewById(R.id.btn_daftar)
+        Log.d("mainActivity", "Aplikasi Berhasil dijalankan!")
 
-        btnDaftar.setOnClickListener {
-            val username = etUsername.text.toString()
+        val et_Username: EditText = findViewById(R.id.et_username)
+        val btnLogin: Button = findViewById(R.id.btn_login)
+
+        btnLogin.setOnClickListener {
+            val username = et_Username.text.toString()
             val intent = Intent(this, HomeActivity::class.java)
 
             intent.putExtra("EXTRA_USERNAME", username)
             startActivity(intent)
         }
 
+        val btnDaftar: Button = findViewById(R.id.btnDaftar)
         btnDaftar.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
+
     }
 }
