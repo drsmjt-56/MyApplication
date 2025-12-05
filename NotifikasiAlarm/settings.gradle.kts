@@ -19,7 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Application56"
+rootProject.name = "NotifikasiAlarm"
 include(":app")
-include(":app")
-include(":app")
+ 
